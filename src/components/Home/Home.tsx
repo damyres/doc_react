@@ -1,4 +1,5 @@
 import { Botao } from "../Botao/Botao"
+import Listas from "../Listas/Listas"
 import Usuario from "../Usuario/Usuario"
 
 export const Home = () => {
@@ -8,6 +9,7 @@ export const Home = () => {
             <h1>Bem vindo ao meu aplicativo</h1>
             <Botao />
             <Usuario/>
+            <Listas/>
         </>
     )
 }
