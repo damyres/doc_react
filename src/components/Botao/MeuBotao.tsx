@@ -1,13 +1,9 @@
 import { useState } from "react"
 
-export default function MeuBotao() {
-    const [count, setCount] = useState(0);
-
-    function handleClick() {
-        setCount(count + 1);
-    }
+export default function MeuBotao({count, onClick}) {
+ 
     return (
-        <button onClick={handleClick}>
+        <button onClick={onClick}>
             clicado {count} vezes
         </button>
     )
