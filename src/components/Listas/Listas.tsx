@@ -1,17 +1,24 @@
 const products = [
-    { title: 'Repolho', id: 1 },
-    { title: 'Maça', id: 2 },
-    { title: 'Alho', id: 3 },
-]
-const listaItens = products.map(product =>
-    <li key={product.id}>
-        {product.title}
+    { title: 'Repolho', isFruit: false, id: 1 },
+    { title: 'Maça', isFriit: true, id: 2 },
+    { title: 'Alho', isFruit: false, id: 3 },
+    { title: 'Banana', isFruit: true, id: 4 },
+    { title: 'Laranja', isFruit: true, id: 5 },
+];
 
-    </li>
-)
 export default function Listas() {
+    const listItems = products.map(product =>
+        <li key={product.id}
+            style={{
+                color: product.isFruit ? 'magenta' : 'green'
+            }}
+        >
+            {product.title}
+        </li>
+    );
     return (
-        <ul>{listaItens}</ul>
+        <ul>
+            {listItems}
+        </ul>
     )
-
 }
