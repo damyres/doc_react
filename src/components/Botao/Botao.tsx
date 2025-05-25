@@ -1,13 +1,15 @@
+import { useState } from "react";
+
 export function Botao() {
+    const [count, setCount] = useState(0);
 
     function handleClick() {
-        alert('Você clicou no botão!');
-
+        setCount(count + 1)
     }
     return (
-    <>
-        <button onClick={handleClick}>Clique aqui!</button>
-        <p>Botão com função de click!</p>
-    </>
+        <>
+            <button onClick={handleClick}>clicado {count} vezes</button>
+            <p>Botão com função de click, mas contador usando o estado inicial do botão que é zero.</p>
+        </>
     )
 }
