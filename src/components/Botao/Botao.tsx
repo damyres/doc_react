@@ -1,8 +1,13 @@
 export function Botao() {
+
+    function handleClick() {
+        alert('Você clicou no botão!');
+
+    }
     return (
-        <>
-            <button className= "botaoInicial">Eu sou um botão</button>
-            <p>Esse botão foi criado em um componente</p>
-        </>
+    <>
+        <button onClick={handleClick}>Clique aqui!</button>
+        <p>Botão com função de click!</p>
+    </>
     )
 }

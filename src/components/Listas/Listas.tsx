@@ -17,8 +17,12 @@ export default function Listas() {
         </li>
     );
     return (
-        <ul>
+        <>
+            <ul>
             {listItems}
         </ul>
+        <p>Transformando array de produtos em array de itens</p>
+        </>
+    
     )
 }
